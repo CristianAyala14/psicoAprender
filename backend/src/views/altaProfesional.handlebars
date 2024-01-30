@@ -1,0 +1,42 @@
+<form id="ingresarProfesional">
+    <h2>Ingresar nuevo profesional</h2>
+
+    <label for="nombre">Nombre:</label>
+    <input id="nombre" name="nombre" required>
+    <label for="apellido">Apellido:</label>
+    <input id="apellido" name="apellido" required>
+    <label for="especialidad">Especialidad:</label>
+    <input id="especialidad" name="especialidad" required>
+    <label for="duracionSesion">Duración de Sesión:</label>
+        <select id="duracionSesion" name="duracionSesion" required>
+            <option value="30">30 minutos</option>
+            <option value="45">45 minutos</option>
+            <option value="60">1 hora</option>
+        </select>    
+    <label for="contacto">Contacto:</label>
+    <input id="contacto" name="contacto" required>
+
+    <button type="submit">Ingresar Profesional</button>
+</form>
+
+<form id="buscarprofesional">
+    <h2>Gestionar profesionales: </h2>
+
+    <label for="busquedaTipo">Buscar por:</label>
+    <select id="busquedaTipo" name="busquedaTipo" required>
+        <option value="nombre">Nombre</option>
+        <option value="apellido">Apellido</option>
+        <option value="codigo">Código</option>
+        <option value="especialidad">Especialidad</option>
+        <option value="none">Ninguno</option>
+    </select>
+    <input id="valorBusqueda" name="valorBusqueda" required>
+    
+    <button type="submit">Buscar</button>
+
+    <div id="visorProfesionales">
+
+    </div>
+</form>
+
+<script src="/js/altaProfesional.js"></script>
