@@ -1,7 +1,11 @@
 import mongoose from "mongoose";
 
 const consultorioSchema = new mongoose.Schema({
-    numero: Number,
+    numero:{
+        type:Number,
+        enum:[1,2,3,4,5,6,7,8],
+        require: true
+    },
     disponibilidad: [
         {
             dia:{

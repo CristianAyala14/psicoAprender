@@ -35,7 +35,7 @@ router.post("/", async (req,res)=>{
 //buscar profesionales
 router.get("/buscar", async (req,res)=>{
     try {
-        const { busquedaTipo, valorBusqueda} = req.query;
+        const { busquedaTipo, valorBusqueda, page} = req.query;
         let filter = {}
         if (busquedaTipo === "nombre") {
             filter = { nombre: valorBusqueda };
@@ -50,15 +50,40 @@ router.get("/buscar", async (req,res)=>{
             filter = {};
         }
 
-        const profesionales = await profesionalManager.getProfesionales(filter)
+        const options = {
+            limit: 5,
+            page: page ? parseInt(page, 10) : 1,            
+            lean: true
+        };
+
+        const profesionales = await profesionalManager.getProfesionales(filter,options)
+        
         res.send({
             status: "success",
-            message: profesionales
+            message: "Busqueda finalizada.",
+            profesionales
         })
+        
+        
        
     } catch (error) {
         res.status(500).json({ error: "Error en la busqueda de profesionales del servidor." });
     }
+})
+//buscar profesional por id
+router.get("/buscar/:pid", async(req,res)=>{
+    try {
+        const pid = req.params.pid;
+        const encontrado = await profesionalManager.getProfesionalesById(pid);
+        res.send({
+            status: "success",
+            message: "Profesional encontrado.",
+            encontrado
+        })    
+    } catch (error) {
+        
+    }
+
 })
 
 

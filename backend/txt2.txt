@@ -1,0 +1,13 @@
+CASOS DE USO:
+.Profesional:
+//crud profesional
+    1-Cargar Profesional    DONE     
+    2-Buscar Profesional    DONE 
+    3-Modificar Profesional 
+    4-Eliminar Profesional 
+    -
+    5-buscar disponibilidad de horario.
+// consultorio
+    1-Buscar disponibilidad de consultorio
+    2-Asignar profesional a consultorio
+    3-Buscar disponibilidad en consultorios.

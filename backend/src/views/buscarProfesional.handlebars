@@ -1,0 +1,21 @@
+<form id="buscarprofesional">
+    <h2>Gestionar profesionales: </h2>
+    <label for="busquedaTipo">Buscar por:</label>
+    <select id="busquedaTipo" name="busquedaTipo">
+        <option value="none">Ninguno</option>
+        <option value="nombre">Nombre</option>
+        <option value="apellido">Apellido</option>
+        <option value="codigo">Código</option>
+        <option value="especialidad">Especialidad</option>
+    </select>
+    <input id="valorBusqueda" name="valorBusqueda">
+    
+    <button type="submit">Buscar</button>
+
+    <div id="visorProfesionales">
+        <h2>Profesionales de tu busqueda: </h2>
+    </div>
+
+</form>
+
+<script src="/js/buscarProfesional.js"></script>
