@@ -15,6 +15,12 @@ const avadible_module_schema = new mongoose.Schema({
     enum: ['disponible', 'ocupado', 'cancelado'],
     default: 'disponible',
   },
+  day: {
+    type: String, // Ej: "Psicología", "Fonoaudiología"
+    enum: ['Lunes', 'Martes','Miércoles','Jueves','Viernes','Sábado','None' ],
+    default: 'Lunes',
+    required: true,
+  },
   assigned_by: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'admin_User',
