@@ -8,6 +8,8 @@ export default function ProtectedRoutes() {
         return <Navigate to="/getstarted" replace/>
     }
     return (
-        <div><Outlet/> </div>
+
+        <Outlet/>
+
     )
 }
