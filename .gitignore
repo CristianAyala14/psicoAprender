@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-api/node_modules/
-client/node_modules/
-=======
+
 # Ignorar node_modules de backend y frontend
 api/node_modules/
 client/node_modules/
@@ -29,4 +26,4 @@ client/.vscode/
 # Ignorar sistema operativo
 .DS_Store
 Thumbs.db
->>>>>>> b44846e (03-07-25)
+
