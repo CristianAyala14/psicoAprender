@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+   
 }
 
 html, body {
@@ -13,6 +14,7 @@ html, body {
   line-height: 1.5;
   background-color: #fff;
   color: #000;
+  
 }
 
 
@@ -20,4 +22,12 @@ img, svg {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+:root {
+  --soft-bg-color: #a08ebe;
+  --bakground-component-color: rgb(155, 78, 155);
+  --background-wall-color: rgb(136, 112, 161);
+  --main-letter-icon-color: rgb(202, 192, 212);
+  --hoovers-color: rgb(243, 119, 227);
 }

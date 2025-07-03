@@ -37,6 +37,12 @@ const professional_user_schema = new mongoose.Schema({
       type: String, // Almacena la URL o path de la imagen
       default: "https://muytecnologicos.com/wp-content/uploads/2023/04/Autenticacion-de-usuario.png"
   },
+  days_avadible: {
+    type: String, // Ej: "Psicología", "Fonoaudiología"
+    enum: ['Lunes', 'Martes','Miércoles','Jueves','Viernes','Sábado','None' ],
+    default: 'None',
+    required: true,
+  },
   pacients: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'pacient_user_model'

@@ -4,14 +4,16 @@ function Header() {
   return (
     <div className='header-container'>
       <div className="header-menu">
-
-        <Link to="/"><i class="fa-solid fa-house"></i></Link>
-        <Link to="/getstarted"><p>INICIAR SECION</p></Link>
-        <Link to="/admin-view"><p>PANEL</p></Link>
-        <Link to="/professional-view"><p>PANEL</p></Link>
-        <Link to="/profile-view"><p>PERFIL</p></Link>
-        <Link to="/search"><p>BUSCAR</p></Link>
+        <ul>
+          <li><Link to="/"><i className="fa-solid fa-house"></i></Link></li>
+          <li><Link to="/getstarted"><i className="fa-solid fa-user"></i></Link></li>
+          <li><Link to="/profile-view"><i className="fa-solid fa-user"></i></Link></li>
+          <li><Link to="/admin-view"><i className="fa-solid fa-newspaper"></i></Link></li>
+          <li><Link to="/professional-view"><i className="fa-solid fa-newspaper"></i></Link></li>
+          <li><Link to="/search"><i className="fa-solid fa-magnifying-glass"></i></Link></li>
+        </ul>
         
+        <button className="log-out"><i class="fa-solid fa-right-from-bracket"></i></button>
       </div>
     </div>
   )

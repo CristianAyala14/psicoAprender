@@ -28,6 +28,7 @@ class professional_user_service{
                 profession_2: updateUser.profession_2,
                 profileImage: updateUser.profileImage,
                 contact: updateUser.contact,
+                days_avadible: updateUser.days_avadible
             }
         }, {new:true})
 
