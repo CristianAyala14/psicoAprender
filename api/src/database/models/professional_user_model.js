@@ -29,8 +29,8 @@ const professional_user_schema = new mongoose.Schema({
   },
   profession_2: {
     type: String, // Ej: "Psicología", "Fonoaudiología"
-    enum: ['PS', 'TCC','FO','TO'],
-    default: 'PS',
+    enum: ['PS', 'TCC','INT','DBT','NONE' ],
+    default: 'NONE',
     required: true,
   },
   profileImage: {
