@@ -23,8 +23,8 @@ const professional_user_schema = new mongoose.Schema({
   },
   profession_1: {
     type: String, // Ej: "Psicología", "Fonoaudiología"
-    enum: ['psicología', 'fonoaudiología','terapia_ocupacional','estimulación_temprana','psicopedagogía', 'psicología_infantil'],
-    default: 'psicología',
+    enum: ['psicologia', 'fonoaudiologia','terapia_ocupacional','estimulacion_temprana','psicopedagogia', 'psicologia_infantil'],
+    default: 'psicologia',
     required: true,
   },
   profession_2: {

@@ -1,5 +1,5 @@
 .header-container{
-    width: 8%;
+    width: 5%;
     height: 100vh;
     background-color: var(--background-wall-color);
     display: flex;
@@ -18,7 +18,7 @@
     justify-content: space-between;  
     background-color: var(--bakground-component-color); 
     border-radius: 1rem;
-    width: 90%;
+    width: 75%;
     height: 98%;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }   

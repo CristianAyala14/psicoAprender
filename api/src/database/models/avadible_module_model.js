@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 const collection = "avadible_module";
 const avadible_module_schema = new mongoose.Schema({
-   profesional: {
+   professional: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'professional_user',
     required: true,

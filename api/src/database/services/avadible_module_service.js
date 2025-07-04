@@ -19,7 +19,7 @@ class avadible_module_service{
     update = async(id, updateModule)=>{
         const updated = await avadible_module_model.findByIdAndUpdate(id, {
             $set:{
-                profesional: updateModule.profesional,
+                professional: updateModule.profesional,
                 time: updateModule.time,
                 state: updateModule.state,
                 assigned_by: updateModule.assigned_by,
