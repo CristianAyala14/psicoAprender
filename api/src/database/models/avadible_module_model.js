@@ -17,8 +17,8 @@ const avadible_module_schema = new mongoose.Schema({
   },
   day: {
     type: String, // Ej: "Psicología", "Fonoaudiología"
-    enum: ['Lunes', 'Martes','Miércoles','Jueves','Viernes','Sábado','None' ],
-    default: 'Lunes',
+    enum: ['lunes', 'martes','miercoles','jueves','viernes','sabado' ],
+    default: 'lunes',
     required: true,
   },
   assigned_by: {
@@ -28,7 +28,13 @@ const avadible_module_schema = new mongoose.Schema({
   pacient: [{
   type: mongoose.Schema.Types.ObjectId,
   ref: 'pacient_user_model'
-  }]
+  }],
+  sede: {
+    numeracion: String, 
+    enum: ['uno', 'dos' ],
+    default: 'uno',
+    required: true,
+  }
 
 },{timestamps:true})
 

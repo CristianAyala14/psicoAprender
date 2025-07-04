@@ -23,7 +23,8 @@ class avadible_module_service{
                 time: updateModule.time,
                 state: updateModule.state,
                 assigned_by: updateModule.assigned_by,
-                pacient: updateModule.pacient
+                pacient: updateModule.pacient,
+                sede: updateModule.sede
             }
         }, {new:true})
 

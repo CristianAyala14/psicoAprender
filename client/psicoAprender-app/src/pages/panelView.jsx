@@ -46,8 +46,8 @@ export default function PanelView() {
           <div className="filter-group">
               <label className="filter-labels">Sede: </label>
                 <select id="avadible" className="filter-select">
-                  <option value="avadible">1</option>
-                  <option value="unavadible">2</option>
+                  <option value="uno">Uno</option>
+                  <option value="dos">Dos</option>
                   <option value="all">Todo</option>
                 </select>
             </div>
@@ -207,6 +207,7 @@ export default function PanelView() {
           </div>
         </div>
       </div>
+
       <div className="dashboard-2">
         second
       </div>

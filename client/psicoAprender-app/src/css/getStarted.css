@@ -1,10 +1,108 @@
 .getStarted-container {
-  width: 92%;
+  width: 95%;
   height: 100vh;
-  background-color: rgb(17, 7, 28);
+  background-color: var(--background-wall-color);
+  display: flex;
+  flex-direction: row;
   
 }
 
-h1{
+.dashboard-1{
+  border: 1px solid orange;
+
+  width: 65%;
+  height: 100vh;
+
+}
+
+.dashboard-2{
+  width: 35%;
+  height: 100vh;
+  border: 1px solid orange;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.login-container {
+  width: 70rem;
+  height: 80%;
+  background-color: var(--bakground-component-color);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  
+  
+ 
+  
+}
+.login-form{
+  width: 100%;
+  border: 1px solid;
+}
+.login-image{
+    border: 1px solid;
+
+}
+
+.login-container .input-field {
+  width: 100%;
+  padding: 12px;
+  background-color: #d9b2eb;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.login-container .input-field::placeholder {
+  color: #555;
+}
+
+.login-container .login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4e38d8;
   color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-container .login-button:hover {
+  background-color: #3626a7;
+}
+
+.login-container .forgot-password {
+  font-size: 13px;
+  color: white;
+  text-decoration: underline;
+  margin-top: -5px;
+}
+
+.login-container .divider {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+.login-container .create-button {
+  width: 70%;
+  padding: 12px;
+  background-color: #4ac94a;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-container .create-button:hover {
+  background-color: #3aa63a;
 }

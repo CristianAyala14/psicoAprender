@@ -39,15 +39,21 @@ const professional_user_schema = new mongoose.Schema({
   },
   days_avadible: {
     type: String, // Ej: "Psicología", "Fonoaudiología"
-    enum: ['Lunes', 'Martes','Miércoles','Jueves','Viernes','Sábado','None' ],
-    default: 'None',
+    enum: ['lunes', 'martes','miercoles','jueves','viernes','sabado' ],
+    default: 'lunes',
     required: true,
   },
   pacients: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'pacient_user_model'
   }],
-  numer: String
+  numer: String,
+  sede: {
+    numeracion: String, 
+    enum: ['uno', 'dos' ],
+    default: 'lunes',
+    required: true,
+  }
 
 },{timestamps:true})
 
