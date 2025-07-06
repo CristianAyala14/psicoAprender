@@ -5,9 +5,10 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Header from './components/header';
 import Home from './pages/home';
 import GetStarted from './pages/getStarted';
-import ProfileView from './pages/profileView';
+import ProfessionalProfile from './pages/professionalProfile';
 import Search from './pages/search';
 import PanelView from './pages/panelView';
+import MyProfileView from './pages/myprofileview';
 //components
 //import ProtectedRoutes from './components/protectedRoutes';
 
@@ -29,7 +30,8 @@ function App() {
 
               {/* private route  */}
             {/* <Route element={<ProtectedRoutes/>}> */}
-              <Route path='/profile-view' element={<ProfileView/>}></Route>
+              <Route path='/my-profile-view' element={<MyProfileView/>}></Route>
+              <Route path='/professional-profile-view' element={<ProfessionalProfile/>}></Route>
               <Route path='/search' element={<Search/>}></Route>
               <Route path='/panel-view' element={<PanelView/>}></Route>
               

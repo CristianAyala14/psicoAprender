@@ -9,18 +9,13 @@
 
 
 .profileView-1{
-  border: 1px solid orange;
-
   width: 65%;
   height: 100vh;
-
 }
 
 .profileView-2{
   width: 35%;
   height: 100vh;
-  border: 1px solid orange;
 }
 
 
-/* div search bar add buttons shared with panelview styles */

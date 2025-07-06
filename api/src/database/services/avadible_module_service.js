@@ -24,7 +24,7 @@ class avadible_module_service{
                 state: updateModule.state,
                 day: updateModule.day,
                 assigned_by: updateModule.assigned_by,
-                pacient: updateModule.pacient,
+                patient: updateModule.patient,
                 sede: updateModule.sede,
                 mode: updateModule.mode
             }

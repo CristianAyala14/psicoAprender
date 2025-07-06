@@ -25,7 +25,7 @@ const avadible_module_schema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'admin_User',
   },
-  pacient: [{
+  patient: [{
   type: mongoose.Schema.Types.ObjectId,
   ref: 'pacient_user_model'
   }],

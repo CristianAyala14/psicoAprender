@@ -1,16 +1,16 @@
-
-import "../css/profileView.css"
+import "../css/professionalProfile.css"
 import IntroductionTable from "../components/introductionTable"
 import ModuleGrid from "../components/moduleGrid"
 import React from "react"
 import {useState, useEffect} from "react"
 import "../css/panelView.css"
 import AddModule from "../components/addModule";
+import SearchAdd from "../components/searchAdd"
+
 
 export default function ProfileView() {
   const [showModal2, setShowModal2] = useState(false);
 
-  const [showAddButton, setShowAddButton] = useState(true);
       //mock de prueba
     const mockModules = [
     {
@@ -48,26 +48,14 @@ export default function ProfileView() {
 
 
 
-
-
-
   return (
     <div className='profile-view-container'>
       
       <div className="profileView-1">
-        <div className="search-bar-add-buttons">
-          <div className="search-bar">
-            <input
-              type="text"
-              placeholder="Buscar..."
-              className="search-input"
-            />
-            <button className="search-button">
-              <i className="fa-solid fa-magnifying-glass"></i>
-            </button>
-          </div>
-          
-        </div>
+
+
+
+        <SearchAdd showAddButton={false} />
 
         <IntroductionTable
         name="Cristian"
@@ -82,12 +70,7 @@ export default function ProfileView() {
           showAddButton={true}
           setShowModal2={setShowModal2}
         />
-        
-
-
-
-
-
+      
 
 
       </div>

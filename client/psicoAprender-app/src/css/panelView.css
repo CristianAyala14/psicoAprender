@@ -3,108 +3,40 @@
   height: 100vh;
   background-color: var(--background-wall-color);
   display: flex;
-  flex-direction: row;
-  
 }
 
-
 .dashboard-1{
-  
+  display: flex;
+  flex-direction: column;
   width: 65%;
   height: 100vh;
-
+  gap: 1rem;
 }
 
 .dashboard-2{
-  width: 35%;
+   width: 35%;
   height: 100vh;
-  border: 1px solid orange;
-}
-
-/* dashboard 1 */
-/* first container - search and add buttons */
-.search-bar-add-buttons {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 10%;
-  border: 1px solid orange;
-
-}
-
-.search-bar {
-  display: flex;
-  align-items: center;
-  background-color: var(--soft-bg-color);
-  height: 5.2rem;
-  width: 40rem;
+  flex-direction: column;
   padding-inline: 1rem;
-  border-radius: 2rem;
-
-}
-
-.search-input {
-  
-  background-color: transparent;
-  border: none;
-  outline: none;
-  color: var(--main-letter-icon-color);
-  font-size: 2rem;
-  flex: 1;
-}
-
-.search-input::placeholder {
-  color: var(--main-letter-icon-color);
-}
-
-.search-button {
-  
-  background: none;
-  border: none;
-  color: var(--main-letter-icon-color);
-  font-size: 2.7rem;
-  cursor: pointer;
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.search-button:hover {
-  transform: scale(1.2);
-  color: var(--hoovers-color);
-}
-
-
-.add-button {
-  display: flex;
   gap: 1rem;
+}
+
+.part-2{
+  flex: 2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+  background-color: var(--bakground-component-color); 
+  border-radius: 1rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.add-button button {
-  background-color: var(--soft-bg-color);
-  border: none;
-  height: 5.2rem;
-  width: 5.2rem;
-  border-radius: 80%;
-  font-size: 3rem;
-  color: var(--main-letter-icon-color);
-  cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.add-button button:hover {
-  color: var(--hoovers-color);
-  transform: scale(1.1);
+  justify-content: space-between;
+  padding-inline: 1rem;
 }
 
 
-
-/* thrid container - filters panel */
+/* third container - filters panel */
 
 .filters-table{
-  margin-top: 1rem;
-  height: 5%;
   border-radius: 1rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   background-color: var(--bakground-component-color); 
@@ -157,166 +89,3 @@
 
 
 
-/* modal windows */
-/* add user */
-.modal-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(16, 1, 19, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-.modal-window {
-  width: 50%;
-  height: 70%;
-  background-color: var(--bakground-component-color);
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1.2rem;
-  overflow-y: auto;
-  position: relative;
-}
-
-.modal-title {
-  font-size: 2.8rem;
-  text-align: center;
-  font-weight: bold;
-  color: var(--main-letter-icon-color);
-}
-
-.toggle-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.toggle-buttons button {
-  width: 15rem;
-  background-color: var(--soft-bg-color);
-  border: none;
-  padding: 0.6rem 1rem;
-  border-radius: 8px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-  color: var(--main-letter-icon-color);
-  font-size: 2rem;
-}
-
-
-.toggle-buttons button:hover {
-  background-color: var(--hoovers-color);
-  color: var(--main-letter-icon-color);
-}
-
-/* when selected */
-.toggle-buttons button.active {
-  background-color: var(--strong-color);
-  color: var(--main-letter-icon-color);
-}
-
-.modal-container form {
-  width: 90%;
-  padding-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-
-.modal-container form label{
-  font-size: 1.8rem;
-  color: var(--main-letter-icon-color);
-  margin: 0;
-}
-
-.modal-container form input,
-.modal-container form select,
-.modal-container form textarea {
-  border: none;
-  padding: 1rem 1rem;
-  font-size: 1.3rem;
-  border-radius: 8px;
-  width: 100%;
-  outline: none;
-  background-color: var(--soft-bg-color);
-  color: var(--main-letter-icon-color);
-}
-
-.modal-container form input:focus,
-.modal-container form select:focus,
-.modal-container form textarea:focus {
-  border: 1px solid var(--hoovers-color);
-  box-shadow: 0 0 5px var(--hoovers-color);
-}
-
-
-
-.modal-container form button[type="submit"] {
-  width: 10rem;
-  background-color: var(--hoovers-color);
-  color: var(--bakground-component-color);
-  padding: 0.8rem 1rem;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.modal-container form button[type="submit"]:hover {
-  background-color: var(--main-letter-icon-color);
-  color: var(--hoovers-color);
-}
-
-.modal-window > button:last-child {
-  text-decoration: none;
-  background-color: transparent;
-  border: none;
-  color: var(--main-letter-icon-color);
-  margin-top: 0.5rem;
-  cursor: pointer;
-  align-self: center;
-  font-size: 1.2rem;
-}
-
-.days-checkbox-group {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-  gap: 0.6rem 1.2rem;
-  padding: 0.5rem 0;
-}
-
-.checkbox-day {
-  display: flex;
-  align-items: center;
-  font-size: 1rem;
-  color: var(--main-letter-icon-color);
-  gap: 0.4rem;
-  cursor: pointer;
-  user-select: none;
-}
-.checkbox-day input[type="checkbox"] {
-  width: 1.3rem;
-  height: 1.3rem;
-  accent-color: var(--hoovers-color); /* opcional, personaliza el color */
-}
-
-
-/* modal window 2 */
-.time-input-group {
-  display: flex;
-  gap: 1rem;
-  width: 100%;
-}

@@ -101,4 +101,25 @@
   width: 100%;
 }
 
-/* Puedes agregar más estilos específicos si quieres */
+.search-result-list {
+  list-style: none;
+  padding: 0;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  background-color: var(--soft-bg-color);
+  border-radius: 8px;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.search-result-list li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color: var(--main-letter-icon-color);
+}
+
+.search-result-list li:hover {
+  background-color: var(--hoovers-color);
+  color: var(--bakground-component-color);
+}
