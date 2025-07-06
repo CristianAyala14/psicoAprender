@@ -1,0 +1,104 @@
+/* modal2 windows - add module */
+
+.modal2-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(16, 1, 19, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal2-window {
+  width: 50%;
+  max-width: 600px;
+  height: 70%;
+  background-color: var(--bakground-component-color);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.2rem;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal2-title {
+  font-size: 2.8rem;
+  text-align: center;
+  font-weight: bold;
+  color: var(--main-letter-icon-color);
+}
+
+.modal2-form {
+  width: 90%;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.modal2-form select,
+.modal2-form input,
+.modal2-form textarea {
+  border: none;
+  padding: 1rem 1rem;
+  font-size: 1.3rem;
+  border-radius: 8px;
+  width: 100%;
+  outline: none;
+  background-color: var(--soft-bg-color);
+  color: var(--main-letter-icon-color);
+}
+
+.modal2-form select:focus,
+.modal2-form input:focus,
+.modal2-form textarea:focus {
+  border: 1px solid var(--hoovers-color);
+  box-shadow: 0 0 5px var(--hoovers-color);
+}
+
+.modal2-form button[type="submit"] {
+  width: 10rem;
+  background-color: var(--hoovers-color);
+  color: var(--bakground-component-color);
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.modal2-form button[type="submit"]:hover {
+  background-color: var(--main-letter-icon-color);
+  color: var(--hoovers-color);
+}
+
+.modal2-window > button:last-child {
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  color: var(--main-letter-icon-color);
+  margin-top: 0.5rem;
+  cursor: pointer;
+  align-self: center;
+  font-size: 1.2rem;
+}
+
+/* time input group sigue igual */
+.time-input-group {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Puedes agregar más estilos específicos si quieres */

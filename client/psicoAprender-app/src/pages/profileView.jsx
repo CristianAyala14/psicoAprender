@@ -1,0 +1,112 @@
+
+import "../css/profileView.css"
+import IntroductionTable from "../components/introductionTable"
+import ModuleGrid from "../components/moduleGrid"
+import React from "react"
+import {useState, useEffect} from "react"
+import "../css/panelView.css"
+import AddModule from "../components/addModule";
+
+export default function ProfileView() {
+  const [showModal2, setShowModal2] = useState(false);
+
+  const [showAddButton, setShowAddButton] = useState(true);
+      //mock de prueba
+    const mockModules = [
+    {
+      time: "10:00 AM",
+      day: "lunes",
+      professional: "Lic. Pérez",
+      pacient: "Juan Pérez"
+    },
+    {
+      time: "11:00 AM",
+      day: "martes",
+      professional: "Lic. Gómez",
+      pacient: null
+    },
+    {
+      time: "15:00 PM",
+      day: "miercoles",
+      professional: "Lic. Fernández",
+      pacient: "Ana"
+    },
+  
+  ];
+  const groupModulesByDay = (modules) => {
+    const grouped = {};
+    for (const mod of modules) {
+      const day = mod.day.toLowerCase();
+      if (!grouped[day]) grouped[day] = [];
+      grouped[day].push(mod);
+    }
+    return grouped;
+  };
+  const modulesByDay = groupModulesByDay(mockModules);
+
+
+
+
+
+
+
+
+  return (
+    <div className='profile-view-container'>
+      
+      <div className="profileView-1">
+        <div className="search-bar-add-buttons">
+          <div className="search-bar">
+            <input
+              type="text"
+              placeholder="Buscar..."
+              className="search-input"
+            />
+            <button className="search-button">
+              <i className="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          
+        </div>
+
+        <IntroductionTable
+        name="Cristian"
+        day="lunes"
+        dateTime="10:00 AM"
+        />
+
+        <ModuleGrid 
+          modulesByDay={modulesByDay}
+          onEditModule={(mod) => console.log("editar modulo:",mod)}
+          onDeleteModule={(mod) => console.log("eliminar modulo:",mod)}
+          showAddButton={true}
+          setShowModal2={setShowModal2}
+        />
+        
+
+
+
+
+
+
+
+      </div>
+
+
+      <div className="profileView-2">
+        second
+      </div>
+
+
+      {showModal2 && (
+           <AddModule
+             setShowModal2={setShowModal2}
+           />
+      )}
+
+    </div>
+
+    
+
+  )
+}

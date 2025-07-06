@@ -1,0 +1,26 @@
+.profile-view-container {
+  width: 95%;
+  height: 100vh;
+  background-color: var(--background-wall-color);
+  display: flex;
+  flex-direction: row;
+  
+}
+
+
+.profileView-1{
+  border: 1px solid orange;
+
+  width: 65%;
+  height: 100vh;
+
+}
+
+.profileView-2{
+  width: 35%;
+  height: 100vh;
+  border: 1px solid orange;
+}
+
+
+/* div search bar add buttons shared with panelview styles */

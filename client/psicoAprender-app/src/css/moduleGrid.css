@@ -1,0 +1,119 @@
+/*container grid  */
+.grid-container{
+  padding: 1rem;
+  margin-top: 1rem;
+  height: 60%;
+  display: flex;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  background-color: var(--bakground-component-color); 
+  gap: 1rem;
+}
+
+.day-column-grid{
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.day-tittle{
+  color: var(--main-letter-icon-color);
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--soft-bg-color);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+
+
+.module-column{
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background-color: var(--main-letter-icon-color);
+  height: 90%;
+  width: 100%;
+
+  padding: 0.5rem;
+  overflow-x: hidden;
+}
+
+.module{
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  height: 8rem;
+  width: 100%;
+  border: 1px solid rgb(117, 102, 102);
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--background-wall-color);
+}
+
+.module-info{
+  font-size: 2rem;
+  color: var(--main-letter-icon-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 1.2rem;
+}
+
+.buttons{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.buttons button{
+  background-color: var(--soft-bg-color);
+  border: none;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 1rem;
+  font-size: 2rem;
+  color: var(--main-letter-icon-color);
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.buttons button:hover {
+  color: var(--hoovers-color);
+  transform: scale(1.1);
+}
+
+
+.add-module {
+  display: flex;
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.add-module button {
+  background-color: var(--soft-bg-color);
+  border: none;
+  height: 5.2rem;
+  width: 5.2rem;
+  border-radius: 80%;
+  font-size: 3rem;
+  color: var(--main-letter-icon-color);
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.add-module button:hover {
+  color: var(--hoovers-color);
+  transform: scale(1.1);
+}

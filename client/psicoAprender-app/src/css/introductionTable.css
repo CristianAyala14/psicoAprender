@@ -1,0 +1,52 @@
+/* second container - introduction table */
+
+.introduction-table{
+  height: 20%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+  background-color: var(--bakground-component-color); 
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 1rem;
+}
+
+
+.intro-left {
+  padding-block: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.intro-date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.4rem;
+  opacity: 0.9;
+  width:20rem;
+  height: 3rem;
+  padding-inline: 1rem;
+  border-radius: 1rem;
+  background-color: var(--soft-bg-color);
+  color: var(--main-letter-icon-color);
+}
+
+.intro-text h2 {
+  font-size: 3.8rem;
+  margin: 0;
+  color: var(--main-letter-icon-color);
+}
+
+.intro-text p {
+  font-size: 1.8rem;
+  color: var(--main-letter-icon-color);
+  margin: 0;
+}
+
+.intro-image img {
+  height: 120px;
+  object-fit: contain;
+}
