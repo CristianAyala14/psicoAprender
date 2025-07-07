@@ -6,11 +6,18 @@ import IntroductionTable from "../components/introductionTable";
 import AddNewUser from "../components/addNewUser";
 import SearchAdd from "../components/searchAdd";
 import TechnicalFile from "../components/technicalFile";
+import FilterTable from "../components/filtersTable";
 
 export default function PanelView() {
 const [adminUser, setAdminUser] = useState(true);
-  const [showModal, setShowModal] = useState(false);
-
+const [showModal, setShowModal] = useState(false);
+//filtertable filters saved
+  const [filters, setFilters] = useState(null);
+  
+  const handleFiltersChange = (newFilters) => {
+    console.log("Filtros en panelView.jsx:", newFilters);
+    setFilters(newFilters);
+  };
     //mock de prueba
   const mockModules = [
     {
@@ -45,6 +52,8 @@ const [adminUser, setAdminUser] = useState(true);
   const modulesByDay = groupModulesByDay(mockModules);
 
 
+  
+
 
   return (
     <div className='panel-view-container'>
@@ -60,52 +69,7 @@ const [adminUser, setAdminUser] = useState(true);
         />
 
         {adminUser && (
-          <div className="filters-table">
-          <div className="filter-group">
-              <label className="filter-labels">Sede: </label>
-                <select id="avadible" className="filter-select">
-                  <option value="uno">Uno</option>
-                  <option value="dos">Dos</option>
-                  <option value="all">Todo</option>
-                </select>
-            </div>
-          
-            <div className="filter-group">
-              <label className="filter-labels">Disponibilidad: </label>
-                <select id="avadible" className="filter-select">
-                  <option value="avadible">Disponible</option>
-                  <option value="unavadible">Ocupado</option>
-                  <option value="all">Todo</option>
-                </select>
-            </div>
-
-            <div className="filter-group">
-              <label className="filter-labels">Profesion: </label>
-                <select id="profession" className="filter-select">
-                  <option value="psicologia">Psicología</option>
-                  <option value="fonoaudiologia">Fonoaudiología</option>
-                  <option value="terapia_ocupacional">Terapia Ocupacional</option>
-                  <option value="estimulacion_temprana">Estimulación Temprana</option>
-                  <option value="psicopedagogia">Psicopedagogía</option>
-                  <option value="psicologia_infantil">Psicologia Infantil</option>
-                  <option value="all">Todo</option>
-                </select>
-            </div>
-
-            <div className="filter-group">
-              <label className="filter-labels">Tipo: </label>
-                <select id="type" className="filter-select">
-                  <option value="PS">PS</option>
-                  <option value="TCC">TCC</option>
-                  <option value="INT">INT</option>
-                  <option value="DBT">DBT</option>
-                  <option value="NONE">NONE</option>
-                 
-                </select>
-            </div>
-              
-          
-        </div>
+          <FilterTable panelView={true} onFiltersChange={handleFiltersChange}/>
         )}
 
         <ModuleGrid 

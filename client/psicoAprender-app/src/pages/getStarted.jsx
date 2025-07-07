@@ -10,7 +10,7 @@ export default function GetStarted() {
       </div>
 
       <div className="getStarted-2">
-        <div class="login-container">
+        <div className="login-container">
           <div className="login-form">
             <input type="text" placeholder="Correo electrónico" class="input-field" />
             <input type="password" placeholder="Contraseña" class="input-field" />

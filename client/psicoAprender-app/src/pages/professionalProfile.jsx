@@ -79,7 +79,7 @@ export default function ProfileView() {
 
       <div className="profileView-2">
         <TechnicalFile/>
-          <div className="part-2">
+          <div className="profileView-part-2">
 
           </div>
       </div>

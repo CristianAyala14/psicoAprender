@@ -1,11 +1,20 @@
+
+.technical-file-container{
+  flex:40;
+}
+
+
+
 .profile-card {
     width: 100%;
+    height: 100%;
     padding: 1.5rem;
     border-radius: 1.5rem;
-    background-color: #45366d;
+    background-color: var(--bakground-component-color);
     color: var(--main-letter-icon-color);
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     gap: 2rem;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
@@ -20,11 +29,11 @@
 }
 
 .edit-btn {
-  background-color: var(--bakground-component-color);
+  background-color: var(--background-wall-color);
   border: none;
   border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
   color: white;
   cursor: pointer;
   display: flex;
@@ -39,8 +48,8 @@
 }
 
 .profile-img {
-  width: 80px;
-  height: 80px;
+  width: 8rem;
+  height: 8rem;
   border-radius: 50%;
   object-fit: cover;
   background-color: #3e3d5c;
@@ -48,30 +57,33 @@
 
 .profile-text h3 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 2.3rem;
+  color: var(--main-letter-icon-color);
 }
 
 .profile-text .profession {
-  font-size: 1rem;
-  color: #a7a7c2;
+  font-size: 1.6rem;
+  color: var(--main-letter-icon-color);
 }
 
 .profile-text .location {
-  font-size: 0.9rem;
-  color: #888;
+  font-size: 1.3rem;
+  color: var(--main-letter-icon-color);
 }
 
 .profile-description {
-  font-size: 0.95rem;
+  font-size: 1.3rem;
   color: #ccc;
   padding-inline: 0.5rem;
+  word-wrap: break-word; 
+  overflow-wrap: break-word;
 }
 
 .profile-details {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  padding-inline: 0.5rem;
+  padding-inline: 1rem;
 }
 
 .detail-block {
@@ -81,11 +93,11 @@
 }
 
 .detail-block .label {
-  font-size: 0.8rem;
-  color: #888;
+  font-size: 1.5rem;
+  color: var(--main-letter-icon-color);
 }
 
 .detail-block .value {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: bold;
 }

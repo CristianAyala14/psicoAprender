@@ -2,16 +2,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 0.3rem;
   flex: 0.3;
 }
 
 .search-bar {
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: var(--soft-bg-color);
-  height: 5.2rem;
+  height: 3.5rem;
   width: 40rem;
-  padding-inline: 1rem;
+  padding: 1rem;
   border-radius: 2rem;
 
 }
@@ -22,7 +24,7 @@
   border: none;
   outline: none;
   color: var(--main-letter-icon-color);
-  font-size: 2rem;
+  font-size: 1.7rem;
   flex: 1;
 }
 
@@ -57,10 +59,10 @@
 .add-button button {
   background-color: var(--soft-bg-color);
   border: none;
-  height: 5.2rem;
-  width: 5.2rem;
+  height: 4.6rem;
+  width: 5rem;
   border-radius: 80%;
-  font-size: 3rem;
+  font-size: 2.8rem;
   color: var(--main-letter-icon-color);
   cursor: pointer;
   transition: transform 0.2s ease, background-color 0.2s ease;
