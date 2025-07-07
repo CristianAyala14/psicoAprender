@@ -80,7 +80,6 @@ export default function FilterTable({ panelView, onFiltersChange }) {
 
         {selectedProfession === "psicologia" && (
           <div className="filter-group">
-            <label className="filter-labels">Tipo: </label>
             <select
               id="tipo"
               className="filter-select"
@@ -96,10 +95,12 @@ export default function FilterTable({ panelView, onFiltersChange }) {
           )}
 
       </div>
-
-      <button onClick={applyFilters} className="apply-filters-btn">
-        Filtrar
-      </button>
+      <div className="apply-filters-btn">
+        <button onClick={applyFilters} className="search-button">
+          <i className="fa-solid fa-arrows-rotate"></i>
+        </button>
+      </div>
+      
 
     </div>
   );

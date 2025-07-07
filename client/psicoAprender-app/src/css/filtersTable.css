@@ -42,3 +42,30 @@
   border-radius: 1rem;
 }
 
+
+.apply-filters-btn {
+  display: flex;
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.apply-filters-btn button{
+  background-color: var(--soft-bg-color);
+  border: none;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 80%;
+  font-size: 2.5rem;
+  color: var(--main-letter-icon-color);
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.apply-filters-btn button:hover {
+  color: var(--hoovers-color);
+  transform: scale(1.1);
+}
+
+

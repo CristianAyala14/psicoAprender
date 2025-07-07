@@ -9,6 +9,8 @@ function Header() {
           <li><Link to="/getstarted"><i className="fa-solid fa-user"></i></Link></li>
           <li><Link to="/my-profile-view"><i className="fa-solid fa-user"></i></Link></li>
           <li><Link to="/panel-view"><i className="fa-solid fa-newspaper"></i></Link></li>
+          <li><Link to="/search"><i className="fa-solid fa-magnifying-glass"></i></Link></li>
+
         </ul>
         
         <button className="log-out"><i className="fa-solid fa-right-from-bracket"></i></button>

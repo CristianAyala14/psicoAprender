@@ -1,0 +1,64 @@
+.professional-item-card {
+  cursor: pointer;
+  background-color: var(--background-wall-color);
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 11rem;
+  transition: transform 0.2s;
+  min-width: 220px;
+}
+
+.professional-item-card:hover {
+  transform: translateY(-4px);
+}
+
+.professional-info {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.professional-img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--main-letter-icon-color);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.professional-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.professional-name {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--main-letter-icon-color);
+
+}
+
+.professional-main {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #bbb;
+}
+
+.professional-type {
+  font-size: 0.85rem;
+  color: var(--main-letter-icon-color);
+}
+
+.professional-days {
+  font-size: 1rem;
+  color: var(--main-letter-icon-color);
+  margin-top: 0.3rem;
+}
