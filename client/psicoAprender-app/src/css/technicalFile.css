@@ -1,12 +1,91 @@
-.technical-file-container {
-    flex: 1;
+.profile-card {
     width: 100%;
-    height: 100%;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    border-radius: 1rem;
-    background-color: var(--bakground-component-color); 
-    border-radius: 1rem;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    background-color: #45366d;
+    color: var(--main-letter-icon-color);
     display: flex;
-    justify-content: space-between;
-    padding-inline: 1rem;
+    flex-direction: column;
+    gap: 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--main-letter-icon-color);
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.edit-btn {
+  background-color: var(--bakground-component-color);
+  border: none;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #3e3d5c;
+}
+
+.profile-text h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.profile-text .profession {
+  font-size: 1rem;
+  color: #a7a7c2;
+}
+
+.profile-text .location {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.profile-description {
+  font-size: 0.95rem;
+  color: #ccc;
+  padding-inline: 0.5rem;
+}
+
+.profile-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-inline: 0.5rem;
+}
+
+.detail-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detail-block .label {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.detail-block .value {
+  font-size: 1.1rem;
+  font-weight: bold;
 }

@@ -1,4 +1,4 @@
-.professional-view-container {
+.panel-view-container {
   width: 95%;
   height: 100vh;
   background-color: var(--background-wall-color);
@@ -37,6 +37,7 @@
 /* third container - filters panel */
 
 .filters-table{
+  flex:0.5;
   border-radius: 1rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   background-color: var(--bakground-component-color); 

@@ -1,10 +1,8 @@
-/* dashboard 1 */
-/* first container - search and add buttons */
 .search-bar-add-buttons {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 10%;
+  flex: 0.3;
 }
 
 .search-bar {
@@ -72,3 +70,4 @@
   color: var(--hoovers-color);
   transform: scale(1.1);
 }
+

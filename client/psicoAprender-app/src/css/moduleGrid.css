@@ -1,8 +1,7 @@
 /*container grid  */
 .grid-container{
-  
   padding: 1rem;
-  height: 60%;
+  flex: 4;
   display: flex;
   border-radius: 1rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);

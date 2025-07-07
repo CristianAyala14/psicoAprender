@@ -15,10 +15,12 @@ const patient_schema = new mongoose.Schema({
     required: true,
     unique: true,
   },
+  
   contact: {
     type: String,
     required: true, // puede ser número de teléfono o email
   },
+
   reason_for_consultation: {
     type: String,
     required: true,

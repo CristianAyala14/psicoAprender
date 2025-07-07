@@ -6,6 +6,7 @@ import {useState, useEffect} from "react"
 import "../css/panelView.css"
 import AddModule from "../components/addModule";
 import SearchAdd from "../components/searchAdd"
+import TechnicalFile from "../components/technicalFile";
 
 
 export default function ProfileView() {
@@ -77,9 +78,11 @@ export default function ProfileView() {
 
 
       <div className="profileView-2">
-        second
-      </div>
+        <TechnicalFile/>
+          <div className="part-2">
 
+          </div>
+      </div>
 
       {showModal2 && (
            <AddModule

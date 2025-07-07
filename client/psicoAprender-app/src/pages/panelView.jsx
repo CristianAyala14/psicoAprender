@@ -12,7 +12,7 @@ const [adminUser, setAdminUser] = useState(true);
   const [showModal, setShowModal] = useState(false);
 
     //mock de prueba
-    const mockModules = [
+  const mockModules = [
     {
       time: "10:00 AM",
       day: "lunes",
@@ -46,11 +46,8 @@ const [adminUser, setAdminUser] = useState(true);
 
 
 
-
-
-
   return (
-    <div className='professional-view-container'>
+    <div className='panel-view-container'>
 
       <div className="dashboard-1">
 
