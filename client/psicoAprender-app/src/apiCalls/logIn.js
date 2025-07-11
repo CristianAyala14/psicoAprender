@@ -1,4 +1,4 @@
-import { axiosCall, axiosWithAuth } from "./axiosConfig";
+import { axiosCall } from "./axiosConfig";
 
 
 export async function logInReq(user){
