@@ -30,13 +30,13 @@ const avadible_module_schema = new mongoose.Schema({
   ref: 'pacient_user_model'
   }],
   sede: {
-    numeracion: String,
+    type: String,
     enum: ['uno', 'dos'],
     default: 'uno',
     required: true,
   },
   mode: {
-    numeracion: String,
+    type: String,
     enum: ['semanal', 'quincenal'],
     default: 'semanal',
     required: true,

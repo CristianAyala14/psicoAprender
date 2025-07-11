@@ -9,8 +9,8 @@ import TechnicalFile from "../components/technicalFile";
 import FilterTable from "../components/filtersTable";
 
 export default function PanelView() {
-const [adminUser, setAdminUser] = useState(true);
 const [showModal, setShowModal] = useState(false);
+
 //filtertable filters saved
   const [filters, setFilters] = useState(null);
   
@@ -18,41 +18,112 @@ const [showModal, setShowModal] = useState(false);
     console.log("Filtros en panelView.jsx:", newFilters);
     setFilters(newFilters);
   };
-    //mock de prueba
-  const mockModules = [
-    {
-      time: "10:00 AM",
-      day: "lunes",
-      professional: "Lic. Pérez",
-      pacient: "Juan Pérez"
-    },
-    {
-      time: "11:00 AM",
-      day: "martes",
-      professional: "Lic. Gómez",
-      pacient: null
-    },
-    {
-      time: "15:00 PM",
-      day: "miercoles",
-      professional: "Lic. Fernández",
-      pacient: "Ana"
-    },
-  
-  ];
-  const groupModulesByDay = (modules) => {
-    const grouped = {};
-    for (const mod of modules) {
-      const day = mod.day.toLowerCase();
-      if (!grouped[day]) grouped[day] = [];
-      grouped[day].push(mod);
-    }
-    return grouped;
-  };
-  const modulesByDay = groupModulesByDay(mockModules);
+ 
 
 
-  
+   // MOCK: Datos de módulos (del backend)
+  const modules = [
+  {
+    professional: "60c72b2f9c8d4f0015b2e3c1", // Simula un ObjectId
+    time: "09:00",
+    state: "disponible",
+    day: "lunes",
+    assigned_by: "60c72b2f9c8d4f0015b2e3c2", // Simula un ObjectId
+    patient: [],
+    sede: "uno",
+    mode: "semanal",
+  },
+  {
+    professional: "60c72b2f9c8d4f0015b2e3c3",
+    time: "10:30",
+    state: "ocupado",
+    day: "lunes",
+    assigned_by: "60c72b2f9c8d4f0015b2e3c4",
+    patient: ["60c72b2f9c8d4f0015b2e3c5"], // Simula un ObjectId de paciente
+    sede: "dos",
+    mode: "quincenal",
+  },
+  {
+    professional: "60c72b2f9c8d4f0015b2e3c6",
+    time: "13:00",
+    state: "disponible",
+    day: "miercoles",
+    assigned_by: "60c72b2f9c8d4f0015b2e3c7",
+    patient: [],
+    sede: "uno",
+    mode: "semanal",
+  },
+  {
+    professional: "60c72b2f9c8d4f0015b2e3c8",
+    time: "15:45",
+    state: "cancelado",
+    day: "jueves",
+    assigned_by: "60c72b2f9c8d4f0015b2e3c9",
+    patient: ["60c72b2f9c8d4f0015b2e3ca"],
+    sede: "dos",
+    mode: "semanal",
+  },
+  {
+    professional: "60c72b2f9c8d4f0015b2e3cb",
+    time: "11:15",
+    state: "disponible",
+    day: "viernes",
+    assigned_by: "60c72b2f9c8d4f0015b2e3cc",
+    patient: [],
+    sede: "uno",
+    mode: "quincenal",
+  },
+  {
+    professional: "60c72b2f9c8d4f0015b2e3cd",
+    time: "16:00",
+    state: "ocupado",
+    day: "sabado",
+    assigned_by: "60c72b2f9c8d4f0015b2e3ce",
+    patient: ["60c72b2f9c8d4f0015b2e3cf"],
+    sede: "uno",
+    mode: "semanal",
+  },
+  {
+    professional: "60c72b2f9c8d4f0015b2e3d0",
+    time: "08:30",
+    state: "disponible",
+    day: "lunes",
+    assigned_by: "60c72b2f9c8d4f0015b2e3d1",
+    patient: [],
+    sede: "dos",
+    mode: "semanal",
+  },
+  {
+    professional: "60c72b2f9c8d4f0015b2e3d2",
+    time: "14:00",
+    state: "ocupado",
+    day: "martes",
+    assigned_by: "60c72b2f9c8d4f0015b2e3d3",
+    patient: ["60c72b2f9c8d4f0015b2e3d4"],
+    sede: "uno",
+    mode: "quincenal",
+  },
+  {
+    professional: "60c72b2f9c8d4f0015b2e3d5",
+    time: "17:30",
+    state: "disponible",
+    day: "miercoles",
+    assigned_by: "60c72b2f9c8d4f0015b2e3d6",
+    patient: [],
+    sede: "dos",
+    mode: "semanal",
+  },
+  {
+    professional: "60c72b2f9c8d4f0015b2e3d7",
+    time: "10:00",
+    state: "cancelado",
+    day: "jueves",
+    assigned_by: "60c72b2f9c8d4f0015b2e3d8",
+    patient: ["60c72b2f9c8d4f0015b2e3d9"],
+    sede: "uno",
+    mode: "quincenal",
+  },
+];
 
 
   return (
@@ -68,14 +139,13 @@ const [showModal, setShowModal] = useState(false);
           dateTime="10:00 AM"
         />
 
-        {adminUser && (
-          <FilterTable filtersToShow={["sede", "disponibilidad", "profesion", "tipo"]} onFiltersChange={handleFiltersChange}/>
-        )}
+        <FilterTable filtersToShow={["sede", "disponibilidad", "profesion", "tipo"]} onFiltersChange={handleFiltersChange}/>
 
-        <ModuleGrid 
-          modulesByDay={modulesByDay}
-          onEditModule={(mod) => console.log("editar modulo:",mod)}
-          onDeleteModule={(mod) => console.log("eliminar modulo:",mod)}
+
+        <ModuleGrid
+          modules={modules}
+          onEditModule={(mod) => console.log("editar modulo:", mod)}
+          onDeleteModule={(mod) => console.log("eliminar modulo:", mod)}
           showAddButton={false}
         />
 

@@ -12,7 +12,7 @@ export default function GetStarted() {
       <div className="getStarted-2">
         <div className="login-container">
           <div className="login-form">
-            <input type="text" placeholder="Correo electrónico" class="input-field" />
+            <input type="text" placeholder="Correo electrónico" className="input-field" />
             <input type="password" placeholder="Contraseña" class="input-field" />
             <button className="login-button">Iniciar sesión</button>
             <a href="#" className="forgot-password">¿Has olvidado la contraseña?</a>

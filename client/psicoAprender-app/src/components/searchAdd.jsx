@@ -20,7 +20,6 @@ export default function SearchAdd({ setShowModal }) {
               <i className="fa-solid fa-person-circle-plus"></i>
               </button>
           </div>
-          
         
     </div>
   )
