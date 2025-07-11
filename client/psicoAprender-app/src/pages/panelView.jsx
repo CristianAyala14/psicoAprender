@@ -60,7 +60,7 @@ const [showModal, setShowModal] = useState(false);
 
       <div className="dashboard-1">
 
-        <SearchAdd setShowModal={setShowModal} showAddButton={true}/>
+        <SearchAdd setShowModal={setShowModal}/>
 
         <IntroductionTable
           name="Cristian"
@@ -69,7 +69,7 @@ const [showModal, setShowModal] = useState(false);
         />
 
         {adminUser && (
-          <FilterTable panelView={true} onFiltersChange={handleFiltersChange}/>
+          <FilterTable filtersToShow={["sede", "disponibilidad", "profesion", "tipo"]} onFiltersChange={handleFiltersChange}/>
         )}
 
         <ModuleGrid 

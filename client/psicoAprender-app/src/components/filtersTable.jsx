@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../css/filtersTable.css";
 
-export default function FilterTable({ panelView, onFiltersChange }) {
+export default function FilterTable({ filtersToShow = [], onFiltersChange }) {
   const [selectedProfession, setSelectedProfession] = useState("");
 
   const [filters, setFilters] = useState({
@@ -33,20 +33,24 @@ export default function FilterTable({ panelView, onFiltersChange }) {
   return (
     <div className="filters-table">
       <div className="just-filters">
-        <div className="filter-group">
-          <select
-            id="sede"
-            className="filter-select"
-            onChange={handleFilterChange}
-            defaultValue={"all"}
-          >
-            <option value="uno">Sede 1</option>
-            <option value="dos">Sede 2</option>
-            <option value="all">Todo</option>
-          </select>
-        </div>
 
-        {panelView && (
+        {filtersToShow.includes("sede") && (
+          <div className="filter-group">
+            <select
+              id="sede"
+              className="filter-select"
+              onChange={handleFilterChange}
+              defaultValue={"all"}
+              >
+              <option value="uno">Sede 1</option>
+              <option value="dos">Sede 2</option>
+              <option value="all">Todo</option>
+            </select>                   
+          </div>
+
+        )}
+
+        {filtersToShow.includes("disponibilidad") && (
           <div className="filter-group">
             <select
               id="disponibilidad"
@@ -54,31 +58,36 @@ export default function FilterTable({ panelView, onFiltersChange }) {
               onChange={handleFilterChange}
               defaultValue={"all"}
             >
-              <option value="avadible">Disponible</option>
-              <option value="unavadible">Ocupado</option>
+              <option value="disponible">Disponible</option>
+              <option value="ocupado">Ocupado</option>
               <option value="all">Todo</option>
             </select>
           </div>
         )}
 
-        <div className="filter-group">
-          <select
-            id="profesion"
-            className="filter-select"
-            value={selectedProfession}
-            onChange={handleProfessionChange}
-          >
-            <option value="all">Todo</option>
-            <option value="fonoaudiologia">Fonoaudiología</option>
-            <option value="terapia_ocupacional">Terapia Ocupacional</option>
-            <option value="estimulacion_temprana">Estimulación Temprana</option>
-            <option value="psicologia">Psicología</option>
-            <option value="psicopedagogia">Psicopedagogía</option>
-            <option value="psicologia_infantil">Psicología Infantil</option>
-          </select>
-        </div>
+        {filtersToShow.includes("profesion") && (
+          <div className="filter-group">
+            <select
+              id="profesion"
+              className="filter-select"
+              value={selectedProfession}
+              onChange={handleProfessionChange}
+            >
+              <option value="all">Todo</option>
+              <option value="fonoaudiologia">Fonoaudiología</option>
+              <option value="terapia_ocupacional">Terapia Ocupacional</option>
+              <option value="estimulacion_temprana">Estimulación Temprana</option>
+              <option value="psicologia">Psicología</option>
+              <option value="psicopedagogia">Psicopedagogía</option>
+              <option value="psicologia_infantil">Psicología Infantil</option>
+            </select>
+          </div>
+        )}
 
-        {selectedProfession === "psicologia" && (
+       
+
+      
+        {filtersToShow.includes("tipo") && selectedProfession === "psicologia" && (
           <div className="filter-group">
             <select
               id="tipo"
@@ -96,7 +105,7 @@ export default function FilterTable({ panelView, onFiltersChange }) {
 
       </div>
       <div className="apply-filters-btn">
-        <button onClick={applyFilters} className="search-button">
+        <button onClick={applyFilters}>
           <i className="fa-solid fa-arrows-rotate"></i>
         </button>
       </div>

@@ -5,10 +5,9 @@ function Header() {
     <div className='header-container'>
       <div className="header-menu">
         <ul>
-          <li><Link to="/"><i className="fa-solid fa-house"></i></Link></li>
-          <li><Link to="/getstarted"><i className="fa-solid fa-user"></i></Link></li>
-          <li><Link to="/my-profile-view"><i className="fa-solid fa-user"></i></Link></li>
+          <li><Link to="/"><i className="fa-solid fa-user"></i></Link></li>
           <li><Link to="/panel-view"><i className="fa-solid fa-newspaper"></i></Link></li>
+          <li><Link to="/professional-panel-view"><i className="fa-solid fa-newspaper"></i></Link></li>
           <li><Link to="/search"><i className="fa-solid fa-magnifying-glass"></i></Link></li>
 
         </ul>

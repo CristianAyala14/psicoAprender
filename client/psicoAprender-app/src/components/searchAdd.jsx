@@ -1,7 +1,7 @@
 import React from 'react'
 import "../css/searchAdd.css"
 
-export default function SearchAdd({ setShowModal, showAddButton }) {
+export default function SearchAdd({ setShowModal }) {
   return (
     <div className="search-bar-add-buttons">
         <div className="search-bar">
@@ -14,13 +14,13 @@ export default function SearchAdd({ setShowModal, showAddButton }) {
               <i className="fa-solid fa-magnifying-glass"></i>
             </button>
           </div>
-          {showAddButton && (
-            <div className="add-button">
-                <button onClick={() => setShowModal(true)}>
-                <i className="fa-solid fa-person-circle-plus"></i>
-                </button>
-            </div>
-          )}
+          
+          <div className="add-button">
+            <button onClick={() => setShowModal(true)}>
+              <i className="fa-solid fa-person-circle-plus"></i>
+              </button>
+          </div>
+          
         
     </div>
   )

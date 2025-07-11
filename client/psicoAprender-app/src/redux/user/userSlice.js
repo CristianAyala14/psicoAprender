@@ -23,9 +23,6 @@ const userSlice = createSlice({
     singInStart: (state)=>{
       state.loading = true
     },
-    errorStart: (state)=>{
-      state.error = null;
-    },
     singInSuccess: (state, action)=>{
       state.user = action.payload;
       state.loading = false;
@@ -40,33 +37,7 @@ const userSlice = createSlice({
       state.loading = false;
       state.error = action.payload;
       state.isAuthenticated= false;
-    },
-    updateUserStart:(state)=>{
-      state.loading = true;
-    },
-    updateUserSuccess:(state, action)=>{
-      state.user = action.payload;
-      state.loading = false;
-      state.error = null;
-      state.isAuthenticated = true;
-    },
-    updateUserFailure: (state,action)=>{
-      state.error = action.payload;
-      state.loading = false;
-    },
-    deleteUserStart:(state)=>{
-      state.loading = true;
-    },
-    deleteUserSuccess:(state, action)=>{
-      state.user = null;
-      state.loading = false;
-      state.error = null;
-      state.isAuthenticated = false;
-    },
-    deleteUserFailure: (state,action)=>{
-      state.error = action.payload;
-      state.loading = false;
-    },
+    }
   }
 });
 

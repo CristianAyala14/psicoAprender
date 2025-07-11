@@ -1,4 +1,4 @@
-import "../css/professionalProfile.css"
+import "../css/professionalPanel.css"
 import IntroductionTable from "../components/introductionTable"
 import ModuleGrid from "../components/moduleGrid"
 import React from "react"
@@ -7,10 +7,19 @@ import "../css/panelView.css"
 import AddModule from "../components/addModule";
 import SearchAdd from "../components/searchAdd"
 import TechnicalFile from "../components/technicalFile";
+import AddNewUser from "../components/addNewUser"
+import FilterTable from "../components/filtersTable"
 
-
-export default function ProfileView() {
+export default function ProfessionalPanel() {
+  const [showModal, setShowModal] = useState(false);
   const [showModal2, setShowModal2] = useState(false);
+  const [professionalnUser, setProfessionalnUser] = useState(true);
+
+  const handleFiltersChange = (newFilters) => {
+    console.log("Filtros en professioanlView.jsx:", newFilters);
+    setFilters(newFilters);
+  };
+
 
       //mock de prueba
     const mockModules = [
@@ -56,13 +65,17 @@ export default function ProfileView() {
 
 
 
-        <SearchAdd showAddButton={false} />
+        <SearchAdd setShowModal={setShowModal}/>
 
         <IntroductionTable
         name="Cristian"
         day="lunes"
         dateTime="10:00 AM"
         />
+
+        {professionalnUser && (
+          <FilterTable filtersToShow={["disponibilidad"]} onFiltersChange={handleFiltersChange}/>
+          )}
 
         <ModuleGrid 
           modulesByDay={modulesByDay}
@@ -83,6 +96,9 @@ export default function ProfileView() {
 
           </div>
       </div>
+
+      {showModal && <AddNewUser setShowModal={setShowModal} />}
+
 
       {showModal2 && (
            <AddModule

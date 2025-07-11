@@ -8,12 +8,12 @@
 .search-view-1{
   display: flex;
   flex-direction: column;
-  width: 65%;
+  width: 100%;
   height: 100vh;
   gap: 1rem;
 }
 
-.search-view-2{
+/* .search-view-2{
    width: 35%;
   height: 100vh;
   display: flex;
@@ -43,7 +43,7 @@
   display: flex;
   justify-content: space-between;
   padding-inline: 1rem;
-}
+} */
 
 
 .professional-results{
