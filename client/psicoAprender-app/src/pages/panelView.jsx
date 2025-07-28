@@ -131,32 +131,34 @@ const [showModal, setShowModal] = useState(false);
 
       <div className="dashboard-1">
 
-        <SearchAdd setShowModal={setShowModal}/>
+        <div className="part-one">
+            <SearchAdd setShowModal={setShowModal}/>
+            <IntroductionTable
+            name="Cristian"
+            day="lunes"
+            dateTime="10:00 AM"
+              />  
+            <FilterTable filtersToShow={["sede", "disponibilidad", "profesion", "tipo"]} onFiltersChange={handleFiltersChange}/>
+        </div>
 
-        <IntroductionTable
-          name="Cristian"
-          day="lunes"
-          dateTime="10:00 AM"
-        />
-
-        <FilterTable filtersToShow={["sede", "disponibilidad", "profesion", "tipo"]} onFiltersChange={handleFiltersChange}/>
+        <div className="part-two">
+          <TechnicalFile />
+        </div>
 
 
-        <ModuleGrid
-          modules={modules}
-          onEditModule={(mod) => console.log("editar modulo:", mod)}
-          onDeleteModule={(mod) => console.log("eliminar modulo:", mod)}
-          showAddButton={false}
-        />
 
       </div>
 
       <div className="dashboard-2">
-        <TechnicalFile/>
-        <div className="part-2">
-            caca
-        </div>
+           <ModuleGrid
+          modules={modules}
+          onEditModule={(mod) => console.log("editar modulo:", mod)}
+          onDeleteModule={(mod) => console.log("eliminar modulo:", mod)}
+          showAddButton={false}
+        /> 
       </div>
+
+      
 
       {showModal && <AddNewUser setShowModal={setShowModal} />}
       

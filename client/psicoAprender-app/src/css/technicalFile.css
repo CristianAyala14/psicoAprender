@@ -1,8 +1,9 @@
 
 .technical-file-container{
-  flex:35;
+  height: 100%;
+  padding-top: 0.5rem;
+  padding-inline: 1rem;
 }
-
 
 
 .profile-card {
