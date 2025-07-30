@@ -20,7 +20,7 @@ const [showModal, setShowModal] = useState(false);
   };
  
 
-
+  //FETCH A BACKEND PARA TRAER LOS MODULOS GENERAL
    // MOCK: Datos de módulos (del backend)
   const modules = [
   {
@@ -47,7 +47,7 @@ const [showModal, setShowModal] = useState(false);
     professional: "60c72b2f9c8d4f0015b2e3c6",
     time: "13:00",
     state: "disponible",
-    day: "miercoles",
+    day: "lunes",
     assigned_by: "60c72b2f9c8d4f0015b2e3c7",
     patient: [],
     sede: "uno",
@@ -57,7 +57,7 @@ const [showModal, setShowModal] = useState(false);
     professional: "60c72b2f9c8d4f0015b2e3c8",
     time: "15:45",
     state: "cancelado",
-    day: "jueves",
+    day: "lunes",
     assigned_by: "60c72b2f9c8d4f0015b2e3c9",
     patient: ["60c72b2f9c8d4f0015b2e3ca"],
     sede: "dos",
@@ -67,7 +67,7 @@ const [showModal, setShowModal] = useState(false);
     professional: "60c72b2f9c8d4f0015b2e3cb",
     time: "11:15",
     state: "disponible",
-    day: "viernes",
+    day: "lunes",
     assigned_by: "60c72b2f9c8d4f0015b2e3cc",
     patient: [],
     sede: "uno",
@@ -123,7 +123,7 @@ const [showModal, setShowModal] = useState(false);
     sede: "uno",
     mode: "quincenal",
   },
-];
+  ];
 
 
   return (
@@ -144,8 +144,6 @@ const [showModal, setShowModal] = useState(false);
         <div className="part-two">
           <TechnicalFile />
         </div>
-
-
 
       </div>
 

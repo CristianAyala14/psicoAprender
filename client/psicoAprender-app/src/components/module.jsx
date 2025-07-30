@@ -6,7 +6,6 @@ export default function Module({ module, onEditModule, onDeleteModule }) {
     <div className="module">
       <div className="module-info">
         <p>{module.time}</p>
-        <p>{module.professional}</p>
         <p>{module.pacientName || "Sin paciente"}</p>
       </div>
       <div className="buttons">

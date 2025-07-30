@@ -18,6 +18,9 @@ export default function ProfessionalPanel() {
   const [showModal2, setShowModal2] = useState(false);
   const [selectedDay, setSelectedDay] = useState(false);
 
+
+
+  //FETCH A BACKEND PARA TENER MODULOS DE PROFESIONAL
  // MOCK: Datos de módulos (del backend)
   const modules = [
   {
@@ -124,6 +127,7 @@ export default function ProfessionalPanel() {
 
   // MOCK: Profesional actual (reemplazalo con Redux o tu lógica real)
   const professionalId = "60c72b2f9c8d4f0015b2e3c1";
+
   // Filters
   const [filters, setFilters] = useState(null);
   const handleFiltersChange = (newFilters) => {
@@ -136,30 +140,32 @@ export default function ProfessionalPanel() {
     <div className="profile-view-container">
       <div className="profileView-1">
 
-        <SearchAdd setShowModal={setShowModal}/>
+        <div className="profileView-1-part-one">
+          <SearchAdd setShowModal={setShowModal}/>
+          <IntroductionTable
+            name="Cristian"
+            day="lunes"
+            dateTime="10:00 AM"
+          />  
+          <FilterTable filtersToShow={["disponibilidad"]} onFiltersChange={handleFiltersChange}/>
+        </div>
         
+        <div className="profileView-1-part-two">
+          <TechnicalFile />
+        </div>
 
-        <IntroductionTable
-          name="Cristian"
-          day="lunes"
-          dateTime="10:00 AM"
-        />
+        
+    
+      </div>
 
-        <FilterTable filtersToShow={["disponibilidad"]} onFiltersChange={handleFiltersChange} />
-
+      <div className="profileView-2">
         <ModuleGrid
           modules={modules}
           onEditModule={(mod) => console.log("editar modulo:", mod)}
           onDeleteModule={(mod) => console.log("eliminar modulo:", mod)}
           showAddButton={true}
           setShowModal2={setShowModal2}
-          setSelectedDay={setSelectedDay}
-        />
-      </div>
-
-      <div className="profileView-2">
-        <TechnicalFile />
-        <div className="profileView-part-2"></div>
+        /> 
       </div>
 
       {showModal && <AddNewUser setShowModal={setShowModal} />}

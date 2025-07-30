@@ -12,11 +12,12 @@ export default function AddNewUser({ setShowModal }) {
     contact: "",
     password: "",
     reason_for_consultation: "",
-    profession_1: "psicologia",
-    profession_2: "NONE",
+    profession_1: "",
+    profession_2: "",
     description: "",
     days_avadible: [],
-    sede: "uno",
+    sede: "",
+    type: ""
   });
 
   const handleAddUserChange = (e) => {
@@ -28,31 +29,19 @@ export default function AddNewUser({ setShowModal }) {
     const { value, checked } = e.target;
     setNewUser((prev) => ({
       ...prev,
-      days_avadible: checked
-        ? [...prev.days_avadible, value]
+      days_avadible: checked? [...prev.days_avadible, value]
         : prev.days_avadible.filter((day) => day !== value),
     }));
   };
 
   const handleTypeChange = (selectedType) => {
     setType(selectedType);
-    setNewUser({
-      name: "",
-      last_name: "",
-      email: "",
-      contact: "",
-      password: "",
-      reason_for_consultation: "",
-      profession_1: "psicologia",
-      profession_2: "NONE",
-      description: "",
-      days_avadible: [],
-      sede: "uno",
-    });
+    setNewUser(prev => ({ ...prev, type: selectedType }));
   };
 
   const handleAddNewUserSubmit = async (e) => {
     e.preventDefault();
+    //POST AL BACKEND PARA CREAR PACIENTE , O CREAR PROFESIONAL.
     setShowModal(false);
   };
 

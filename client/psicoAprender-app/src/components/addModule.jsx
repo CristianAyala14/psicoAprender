@@ -9,8 +9,6 @@ export default function AddModule({ setShowModal2, selectedDay, professionalId }
  
 
 
-
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     const timeString = `${hour}:${minutes} ${ampm}`;
@@ -22,7 +20,7 @@ export default function AddModule({ setShowModal2, selectedDay, professionalId }
         state: "disponible",  
         assigned_by: professionalId, 
       };
-    console.log("Módulo listo para enviar al backend:", newModule);
+    //POST PARA QUE EL PROFESIONAL PUBLIQUE NUEVO MODULO
     setShowModal2(false)
   };
 
@@ -61,7 +59,7 @@ export default function AddModule({ setShowModal2, selectedDay, professionalId }
             <option value="quincenal">Quincenal</option>
           </select>
 
-          <button type="submit">Crear</button>
+          <button type="submit">Publicar</button>
         </form>
 
         <button onClick={() => setShowModal2(false)}>Cerrar</button>
