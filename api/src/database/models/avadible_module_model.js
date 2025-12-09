@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-const collection = "avadible_module";
+const collection = "avadible_modules";
 const avadible_module_schema = new mongoose.Schema({
    professional: {
     type: mongoose.Schema.Types.ObjectId,
