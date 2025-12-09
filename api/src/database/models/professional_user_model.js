@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-const collection = "professional_users";
+const collection = "professional_user";
 const professional_user_schema = new mongoose.Schema({
   name: {
     type: String,

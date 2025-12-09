@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-const collection = "admin_users";
+const collection = "admin_user";
 const admin_user_schema = new mongoose.Schema({
   name: {
     type: String,
