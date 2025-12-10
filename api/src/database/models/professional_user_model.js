@@ -57,6 +57,10 @@ const professional_user_schema = new mongoose.Schema({
     enum: ['uno', 'dos' ],
     default: 'lunes',
     required: true,
+  },
+  rol: {
+    type: String,
+    require: true
   }
 
 },{timestamps:true})

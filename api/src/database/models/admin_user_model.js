@@ -25,7 +25,14 @@ const admin_user_schema = new mongoose.Schema({
       type: String, // Almacena la URL o path de la imagen
       default: "https://muytecnologicos.com/wp-content/uploads/2023/04/Autenticacion-de-usuario.png"
   },
-  numer: String
+  contact: {
+    type: String,
+    required: true
+  },
+  rol: {
+    type: String,
+    require: true
+  }
 
 },{timestamps:true})
 

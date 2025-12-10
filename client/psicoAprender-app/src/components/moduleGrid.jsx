@@ -8,7 +8,8 @@ export default function ModuleGrid({
   onEditModule,
   onDeleteModule,
   setShowModal2, 
-  setSelectedDay
+  setSelectedDay,
+  panelview
 }) {
 
 //clicked day send to father componnet professionalPanel.jsx

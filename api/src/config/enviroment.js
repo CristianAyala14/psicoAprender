@@ -10,7 +10,7 @@ const PORT = process.env.PORT;
 const MONGO_URL = process.env.MONGO_URL;
 const ACCESS_TOKEN_KEY = process.env.ACCESS_TOKEN_KEY
 const REFRESH_TOKEN_KEY = process.env.REFRESH_TOKEN_KEY
-
+const FRONT_END = process.env.FRONT_END
 
 const envObject = {
   server: {
@@ -24,7 +24,8 @@ const envObject = {
   },
   refreshjwt: {
     key: REFRESH_TOKEN_KEY
-  }
+  },
+  client: FRONT_END
 
 };
 

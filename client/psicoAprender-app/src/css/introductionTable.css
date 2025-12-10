@@ -12,7 +12,7 @@
 
 
 .intro-left {
-  padding-block: 2rem;
+  /* padding-block: 2rem; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;

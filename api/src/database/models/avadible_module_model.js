@@ -1,4 +1,6 @@
 import mongoose from "mongoose";
+import mongoosePaginate from "mongoose-paginate-v2"
+
 const collection = "avadible_module";
 const avadible_module_schema = new mongoose.Schema({
    professional: {
@@ -7,7 +9,7 @@ const avadible_module_schema = new mongoose.Schema({
     required: true,
   },
   time: {
-    type: String, // Ej: "14:30"
+    type: String,
     required: true,
   },
   state: {
@@ -43,6 +45,8 @@ const avadible_module_schema = new mongoose.Schema({
   }
 
 },{timestamps:true})
+
+avadible_module_schema.plugin(mongoosePaginate)
 
 const avadible_module_model = mongoose.model(collection, avadible_module_schema);
 

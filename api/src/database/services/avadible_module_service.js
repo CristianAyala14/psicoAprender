@@ -1,15 +1,25 @@
 import avadible_module_model from "../models/avadible_module_model.js"
 
 class avadible_module_service{
-    getBy = async(email)=>{
-        const founded = await avadible_module_model.findOne({email});
+    getByReference = async(reference)=>{
+        const founded = await avadible_module_model.findOne({reference});
         return founded;
     }
 
-    get = async(id)=>{
+    getById = async(id)=>{
         const founded = await avadible_module_model.findById(id);
         return founded;
     }
+
+    getAll = async () => {
+        const modules = await avadible_module_model.find();
+        return modules;
+    }
+
+    getByProfessional = async (profId) => {
+        const modules = await avadible_module_model.find({ professional: profId });
+        return modules;
+    };
 
     create = async(user)=>{
         const created = await avadible_module_model.create(user);
@@ -19,13 +29,9 @@ class avadible_module_service{
     update = async(id, updateModule)=>{
         const updated = await avadible_module_model.findByIdAndUpdate(id, {
             $set:{
-                professional: updateModule.profesional,
                 time: updateModule.time,
-                state: updateModule.state,
                 day: updateModule.day,
-                assigned_by: updateModule.assigned_by,
                 patient: updateModule.patient,
-                sede: updateModule.sede,
                 mode: updateModule.mode
             }
         }, {new:true})

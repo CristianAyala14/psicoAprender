@@ -15,10 +15,12 @@ export default function AddModule({ setShowModal2, selectedDay, professionalId }
     const newModule = {
         professional: professionalId,
         time: timeString,
-        day: selectedDay,
-        mode: mode,
         state: "disponible",  
-        assigned_by: professionalId, 
+        day: selectedDay,
+        //asssigned_by still missing
+        //patient
+        //sede
+        mode: mode 
       };
     //POST PARA QUE EL PROFESIONAL PUBLIQUE NUEVO MODULO
     setShowModal2(false)

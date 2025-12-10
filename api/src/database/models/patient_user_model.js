@@ -37,6 +37,10 @@ const patient_schema = new mongoose.Schema({
     default: 'lunes',
     required: true,       
   },
+  assigned_by: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'admin_User',
+    }
   
 
 }, { timestamps: true });

@@ -1,6 +1,8 @@
 import React from "react"
 import {useState, useEffect} from "react"
 import "../css/panelView.css"
+import AddModule from "../components/addModule";
+
 import ModuleGrid from "../components/moduleGrid";
 import IntroductionTable from "../components/introductionTable";
 import AddNewUser from "../components/addNewUser";
@@ -10,6 +12,9 @@ import FilterTable from "../components/filtersTable";
 
 export default function PanelView() {
 const [showModal, setShowModal] = useState(false);
+const [showModal2, setShowModal2] = useState(false);
+const [selectedDay, setSelectedDay] = useState(false);
+const [selectedProfessionalId, setSelectedProfessionalId] = useState(null);
 
 //filtertable filters saved
   const [filters, setFilters] = useState(null);
@@ -152,7 +157,9 @@ const [showModal, setShowModal] = useState(false);
           modules={modules}
           onEditModule={(mod) => console.log("editar modulo:", mod)}
           onDeleteModule={(mod) => console.log("eliminar modulo:", mod)}
-          showAddButton={false}
+          showAddButton={true}
+          setShowModal2={setShowModal2}
+          setSelectedDay={setSelectedDay} 
         /> 
       </div>
 
@@ -160,7 +167,11 @@ const [showModal, setShowModal] = useState(false);
 
       {showModal && <AddNewUser setShowModal={setShowModal} />}
       
-
+      {showModal2 && (
+              <AddModule
+                setShowModal2={setShowModal2}  selectedDay={selectedDay} professionalId={professionalId} 
+              />
+            )}
 
     </div>
 

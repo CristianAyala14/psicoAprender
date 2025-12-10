@@ -165,6 +165,7 @@ export default function ProfessionalPanel() {
           onDeleteModule={(mod) => console.log("eliminar modulo:", mod)}
           showAddButton={true}
           setShowModal2={setShowModal2}
+          setSelectedDay={setSelectedDay} 
         /> 
       </div>
 

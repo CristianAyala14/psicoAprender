@@ -1,12 +1,12 @@
 import admin_user_model from "../models/admin_user_model.js"
 
 class admin_user_service{
-    getBy = async(email)=>{
-        const founded = await admin_user_model.findOne({email});
+    getByReference = async(reference)=>{
+        const founded = await admin_user_model.findOne({reference});
         return founded;
     }
 
-    get = async(id)=>{
+    getById = async(id)=>{
         const founded = await admin_user_model.findById(id);
         return founded;
     }
@@ -24,7 +24,8 @@ class admin_user_service{
                 description: updateUser.description,
                 email: updateUser.email,
                 password: updateUser.password,
-                profileImage: updateUser.profileImage
+                profileImage: updateUser.profileImage,
+                contact: updateUser.contact
             }
         }, {new:true})
 

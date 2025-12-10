@@ -1,15 +1,16 @@
 import professional_user_model from "../models/professional_user_model.js"
 
 class professional_user_service{
-    getBy = async(email)=>{
-        const founded = await professional_user_model.findOne({email});
+    getByReference = async(reference)=>{
+        const founded = await professional_user_model.findOne({reference});
         return founded;
     }
 
-    get = async(id)=>{
+    getById = async(id)=>{
         const founded = await professional_user_model.findById(id);
         return founded;
     }
+    
 
     create = async(user)=>{
         const created = await professional_user_model.create(user);
