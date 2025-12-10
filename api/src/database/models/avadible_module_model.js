@@ -25,11 +25,11 @@ const avadible_module_schema = new mongoose.Schema({
   },
   assigned_by: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'admin_User',
+    ref: 'admin_user',
   },
   patient: [{
   type: mongoose.Schema.Types.ObjectId,
-  ref: 'pacient_user_model'
+  ref: 'patient_user_model'
   }],
   sede: {
     type: String,

@@ -3,11 +3,11 @@ const collection = "professional_user";
 const professional_user_schema = new mongoose.Schema({
   name: {
     type: String,
-    require: true,
+    required: true,
   },
   last_name: {
     type: String,
-    require: true
+    required: true
   },
   email: {
     type: String,
@@ -41,12 +41,11 @@ const professional_user_schema = new mongoose.Schema({
       type: String, // Almacena la URL o path de la imagen
       default: "https://muytecnologicos.com/wp-content/uploads/2023/04/Autenticacion-de-usuario.png"
   },
-  days_avadible: {
-    type: String, // Ej: "Psicología", "Fonoaudiología"
-    enum: ['lunes', 'martes','miercoles','jueves','viernes','sabado' ],
-    default: 'lunes',
+  days_avadible: [{
+    type: String,
+    enum: ['lunes','martes','miercoles','jueves','viernes','sabado'],
     required: true,
-  },
+  }],
   patients: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'patient_user_model'
@@ -55,7 +54,7 @@ const professional_user_schema = new mongoose.Schema({
   sede: {
     type: String, 
     enum: ['uno', 'dos' ],
-    default: 'lunes',
+    default: 'uno',
     required: true,
   },
   rol: {

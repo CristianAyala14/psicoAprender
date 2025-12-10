@@ -1,24 +1,37 @@
 // src/components/AddNewUser.jsx
 import React, { useState } from 'react';
 import '../css/addNewUser.css';
+import { createProfessionalReq } from '../apiCalls/professionalCalls';
+
 
 export default function AddNewUser({ setShowModal }) {
   const [type, setType] = useState("paciente");
 
-  const [newUser, setNewUser] = useState({
+  // OBJETO PACIENTE
+  const newPatient = {
     name: "",
     last_name: "",
     email: "",
     contact: "",
-    password: "",
     reason_for_consultation: "",
-    profession_1: "",
-    profession_2: "",
+  };
+
+  // OBJETO PROFESIONAL
+  const newProfessional = {
+    name: "",
+    last_name: "",
+    email: "",
+    contact: "",
     description: "",
+    password: "",
+    profession_1: "psicologia",
+    profession_2: "NONE",
     days_avadible: [],
-    sede: "",
-    type: ""
-  });
+    sede: "uno"
+  };
+
+  const [newUser, setNewUser] = useState(newPatient);
+
 
   const handleAddUserChange = (e) => {
     const { name, value } = e.target;
@@ -36,13 +49,30 @@ export default function AddNewUser({ setShowModal }) {
 
   const handleTypeChange = (selectedType) => {
     setType(selectedType);
-    setNewUser(prev => ({ ...prev, type: selectedType }));
+    setNewUser(selectedType === "paciente" ? newPatient : newProfessional);
   };
 
+  // SUBMIT
   const handleAddNewUserSubmit = async (e) => {
     e.preventDefault();
-    //POST AL BACKEND PARA CREAR PACIENTE , O CREAR PROFESIONAL.
+    let body = {};
+
+    if (type === "paciente") {
+      body = { ...newUser };
+    } else {
+      body = { ...newUser };
+    }
+
+    try {
+      const res = await createProfessionalReq(body)
+    } catch (error) {
+      console.log("algo paso")
+    }
+
+
+    console.log("BODY A ENVIAR:", body);
     setShowModal(false);
+    setNewUser(type === "paciente" ? newPatient : newProfessional);
   };
 
   return (
@@ -82,8 +112,8 @@ export default function AddNewUser({ setShowModal }) {
             <>
               <label>Especialidad principal:</label>
               <select name="profession_1" value={newUser.profession_1} onChange={handleAddUserChange} >
-                <option value="psicologia">Psicología</option>
                 <option value="fonoaudiologia">Fonoaudiología</option>
+                <option value="psicologia">Psicología</option>
                 <option value="terapia_ocupacional">Terapia Ocupacional</option>
                 <option value="estimulacion_temprana">Estimulación Temprana</option>
                 <option value="psicopedagogia">Psicopedagogía</option>

@@ -6,9 +6,7 @@ import cors from "cors";
 import morgan from "morgan";
 
 //route imports
-import { authRouter } from "./routes/authRouter.js";
-import { modulesRouter } from "./routes/modulesRouter.js";
-
+import {professionalRouter} from "./routes/professionalRouter.js"
 //app set
 const app = express()
 app.use(express.urlencoded({extended:true}))
@@ -21,10 +19,7 @@ ConnectDB();
 
 
 //routes
-app.use("/api/auth", authRouter)
-app.use("/api/modules", modulesRouter)
-
-
+app.use("/api/professional", professionalRouter)
 //server run
 const PORT = envObject.server.port
 app.listen(PORT, ()=>{
