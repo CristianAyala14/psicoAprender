@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import '../css/addNewUser.css';
 import { createProfessionalReq } from '../apiCalls/professionalCalls';
+import { createPatientReq } from '../apiCalls/patientCalls';
 
 
 export default function AddNewUser({ setShowModal }) {
@@ -57,17 +58,23 @@ export default function AddNewUser({ setShowModal }) {
     e.preventDefault();
     let body = {};
 
-    if (type === "paciente") {
+    if (type === "professional") {
       body = { ...newUser };
+        try {
+        const res = await createProfessionalReq(body)
+        } catch (error) {
+          console.log("algo paso")
+        }
     } else {
       body = { ...newUser };
+      try {
+        const res = await createPatientReq(body)
+        } catch (error) {
+          console.log("algo paso")
+        }
     }
 
-    try {
-      const res = await createProfessionalReq(body)
-    } catch (error) {
-      console.log("algo paso")
-    }
+    
 
 
     console.log("BODY A ENVIAR:", body);

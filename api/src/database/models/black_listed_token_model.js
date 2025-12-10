@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+const collection = "black_lited_token";
 const blacklistedTokenSchema  = new mongoose.Schema({
    token: {
         type: String,

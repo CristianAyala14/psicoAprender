@@ -7,6 +7,7 @@ import morgan from "morgan";
 
 //route imports
 import {professionalRouter} from "./routes/professionalRouter.js"
+import {patientRouter} from "./routes/patientRouter.js"
 //app set
 const app = express()
 app.use(express.urlencoded({extended:true}))
@@ -20,6 +21,8 @@ ConnectDB();
 
 //routes
 app.use("/api/professional", professionalRouter)
+app.use("/api/patient", patientRouter)
+
 //server run
 const PORT = envObject.server.port
 app.listen(PORT, ()=>{
